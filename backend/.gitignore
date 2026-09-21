@@ -1,0 +1,7 @@
+venv/
+.env
+__pycache__/
+*.pyc
+app_backup.py
+*.h5
+*.keras

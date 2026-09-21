@@ -1,0 +1,82 @@
+//.card-img-overlay {
+//  position: absolute;
+//  top: 700px;
+//  right: 0;
+//  bottom: 0;
+//  left: unset;
+//  height: 30px;
+//}
+//.cover{
+//  height: 350px;
+//}
+
+
+.view{
+  padding-bottom: 50px;
+}
+
+.image-upload{
+  padding-top: 30px;
+}
+.col {
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1), 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 15px;
+  background-color: #ffffff;
+  margin: 5px 10px 0 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.upload{
+  width: 100px;
+}
+
+.heading{
+  padding-top: 20px;
+}
+.file-choose{
+  padding-left: 100px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.callout{
+  padding-right: 20px;
+}
+
+.close-button{
+  margin-left: 290px;
+  margin-top: 10px;
+}
+
+.col1 {
+  float: left;
+  width: 50%;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1), 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 15px;
+  background-color: #ffffff;
+  margin: 5px 10px 0 10px;
+  margin-bottom: 30px;
+  margin-left: 152px;
+}
+
+.col1:hover {
+  transition: 0.6s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 18px 0 rgba(0, 0, 0, 0.2);
+}
+
+.diseases_name{
+  padding-top: 520px;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+a:hover {
+  cursor: pointer;
+}
+.message {
+  color: red;
+}

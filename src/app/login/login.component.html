@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="text-center">
+          <p class="fs-18">PepperGuard</p>
+          <p class="fs-20">Login</p>
+        </div>
+        <form class="login" [formGroup]="loginForm" (ngSubmit)="submitLogin();">
+          <div class="mb-3">
+            <label for="user_name" class="form-label">User Name<span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="user_name" formControlName="cs_user_name"
+                   [ngClass]="{'is-invalid': submit && f2['cs_user_name'].errors}">
+            <div *ngIf="submit && f2['cs_user_name'].errors" class="invalid-feedback">
+              <span *ngIf="f2['cs_user_name'].errors['required']">User name is required.</span>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password<span class="text-danger">*</span></label>
+            <input type="password" class="form-control" id="password" formControlName="cs_user_password"
+                   [ngClass]="{'is-invalid': submit && f2['cs_user_password'].errors}"/>
+            <div *ngIf="submit && f2['cs_user_password'].errors" class="invalid-feedback">
+              <span *ngIf="f2['cs_user_password'].errors['required']">Password is required.</span>
+            </div>
+          </div>
+          <div align="left">
+            <a href="" class="text2" routerLink="/forgotPassword">Forgot Password ?</a>
+          </div>
+          <div class="pt-4">
+            <button type="submit" class="btn btn-light c" [disabled]="submitSpinner">
+              <span *ngIf="submitSpinner" class="spinner-border spinner-border-sm me-1"></span>
+              Login
+            </button>
+          </div>
+        </form>
+        <div align="right">
+          <a href="" class="text" routerLink="/signup">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

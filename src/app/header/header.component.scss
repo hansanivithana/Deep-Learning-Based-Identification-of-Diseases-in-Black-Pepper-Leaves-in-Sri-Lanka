@@ -1,0 +1,40 @@
+.header{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  background-image: url('/assets/bg1.jpg');
+  background-size: cover;
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  padding-top: 90px;
+  border-radius: 15px;
+}
+
+.display1 {
+  font-family: Stylish, serif;
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 1.2;
+  
+}
+
+.page-name{
+  padding-left: 1024px;
+  padding-top: 36px;
+  color:  rgb(193, 181, 181);
+}
+.logout{
+  background-color: #f1f1f1;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  //color: #e10909;
+  margin-left: 924px;
+}
+.logout:hover{
+  color: red;
+}
+.navbar-nav a:hover{
+  color: #175210;
+}

@@ -1,0 +1,45 @@
+<app-header></app-header>
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <div class="col">
+      <div class="heading">
+        <h1>Predict Black pepper Leave Diseases</h1>
+      </div>
+
+      <div class="image-upload">
+        <h2>Upload Image</h2>
+        <img class="upload" src="./assets/images/1.png" alt="Italian Trulli"><br>
+
+        <input *ngIf="status" class="file-choose" type="file" (change)="selectFile($event)"><br>
+
+        <div class="col1" *ngIf="isActive" id="img6">
+
+          <div class="callout" data-closable>
+            <button class="close-button" aria-label="Close alert" type="button" data-close (click)="cancelImage()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <a style="text-decoration: none">
+            <div class="img-col">
+              <img  class="view" [src]="url" width="300" height="400"/> <br>
+            </div>
+            <div class="u-div">
+              <button *ngIf="isActive" type="button" class="btn btn-secondary" style="margin-bottom: 10px" (click)="predictDiseases()">Predict</button>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+      <div *ngIf="predictIsActive" class="diseases_name">
+        <h3 *ngIf="diseases_name">Diseases Name :- {{diseases_name | titlecase}} </h3>
+        <a *ngIf="diseases_name"style="text-decoration: none" (click)="diseasesDetails(diseases_no)">More Details. . .</a>
+        <p *ngIf="errorMessage" class="message">{{ errorMessage }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3"></div>
+</div>
+
+<app-footer></app-footer>

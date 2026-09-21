@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="text-center">
+          <p class="fs-30">PepperGuard</p>
+          <p class="fs-18">Create Account</p>
+        </div>
+        <form class="login" [formGroup]="signUpForm" (ngSubmit)="createAccount();">
+          <div class="mb-3">
+            <label for="cs_user_full_name" class="form-label">Full Name<span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="cs_user_full_name" formControlName="cs_user_full_name"
+                   [ngClass]="{'is-invalid': submit && f1['cs_user_full_name'].errors}"/>
+            <div *ngIf="submit && f1['cs_user_full_name'].errors" class="invalid-feedback">
+              <span *ngIf="f1['cs_user_full_name'].errors['required']">Full Name is required.</span>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="cs_user_name" class="form-label">User Name<span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="cs_user_name" formControlName="cs_user_name"
+                   [ngClass]="{'is-invalid': submit && f1['cs_user_name'].errors}"/>
+            <div *ngIf="submit && f1['cs_user_name'].errors" class="invalid-feedback">
+              <span *ngIf="f1['cs_user_name'].errors['required']">User Name is required.</span>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="cs_user_email" class="form-label">Email Address<span class="text-danger">*</span></label>
+            <input type="email" class="form-control" id="cs_user_email" aria-describedby="emailHelp" formControlName="cs_user_email"
+                   [ngClass]="{'is-invalid': submit && f1['cs_user_email'].errors}"/>
+            <div *ngIf="submit && f1['cs_user_email'].errors" class="invalid-feedback">
+              <span *ngIf="f1['cs_user_email'].errors['required']">Email is required.</span>
+              <span *ngIf="f1['cs_user_email'].errors['email']">Please enter a valid email address.</span>
+            </div>
+            <div id="emailHelp" class="form-text text1">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="cs_user_password" class="form-label">Password<span class="text-danger">*</span></label>
+            <input type="password" class="form-control" id="cs_user_password" formControlName="cs_user_password"
+                   [ngClass]="{'is-invalid': submit && f1['cs_user_password'].errors}"/>
+            <div *ngIf="submit && f1['cs_user_password'].errors" class="invalid-feedback">
+              <span *ngIf="f1['cs_user_password'].errors['required']">Password is required.</span>
+            </div>
+          </div>
+          <div align="center">
+            <p class="inline-block">Already a member?</p>
+            <a href="" class="text" routerLink="/login">Log In</a>
+          </div>
+          <div align="center">
+            <button type="submit" class="btn btn-light c" [disabled]="submitSpinner">
+              <span *ngIf="submitSpinner" class="spinner-border spinner-border-sm me-1"></span>
+              Create Account
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
